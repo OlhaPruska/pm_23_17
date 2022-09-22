@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Ancient_Kyiv;
+  font-diasplay: swap;
+  src: url("../fonts/Ancient_Kyiv.woff2") format("woff2"), url("../fonts/Ancient_Kyiv.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Safron_Modern;
+  font-diasplay: swap;
+  src: url("../fonts/Safron_Modern.woff2") format("woff2"), url("../fonts/Safron_Modern.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: Safron_Modern;
+  font-size: 20px;
+  font-weight: 600;
+  color: blue;
+  background-image: url("../img/gradient.jpg");
+}
