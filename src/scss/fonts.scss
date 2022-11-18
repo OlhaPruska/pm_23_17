@@ -12,3 +12,21 @@
                                 font-weight:400;
                                 font-style:normal;
                             }
+@font-face {
+                                font-family: 'Freight Sans Pro';
+                                src: local('Freight Sans Pro Medium Regular'), local('Freight-Sans-Pro-Medium-Regular'),
+                                    url('FreightSansProMedium-Regular.woff2') format('woff2'),
+                                    url('FreightSansProMedium-Regular.woff') format('woff'),
+                                    url('FreightSansProMedium-Regular.ttf') format('truetype');
+                                font-weight: 400;
+                                font-style: normal;
+                              }
+@font-face {
+                                font-family: 'Freight Sans Pro';
+                                src: local('Freight Sans Pro Semi bold Regular'), local('Freight-Sans-Pro-Semi-bold-Regular'),
+                                    url('FreightSansProSemibold-Regular.woff2') format('woff2'),
+                                    url('FreightSansProSemibold-Regular.woff') format('woff'),
+                                    url('FreightSansProSemibold-Regular.ttf') format('truetype');
+                                font-weight: 400;
+                                font-style: normal;
+                              }

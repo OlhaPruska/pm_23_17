@@ -1,12 +1,753 @@
-@import "fonts";
-body{
-    font-family: Safron_Modern;
-    font-size: 20px;
-    font-weight: 600;
-    color: blue;
-    background-image: url('@img/gradient.jpg');    
+$alert_backgr: #f9a2a2;
+@font-face {
+    font-family: Ancient_Kyiv;
+    font-diasplay: swap;
+    src: url("../fonts/Ancient_Kyiv.woff2") format("woff2"), url("../fonts/Ancient_Kyiv.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: Safron_Modern;
+    font-diasplay: swap;
+    src: url("../fonts/Safron_Modern.woff2") format("woff2"), url("../fonts/Safron_Modern.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: "Freight Sans Pro";
+    src: local("Freight Sans Pro Medium Regular"), local("Freight-Sans-Pro-Medium-Regular"), url("FreightSansProMedium-Regular.woff2") format("woff2"), url("FreightSansProMedium-Regular.woff") format("woff"), url("FreightSansProMedium-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: "Freight Sans Pro";
+    src: local("Freight Sans Pro Semi bold Regular"), local("Freight-Sans-Pro-Semi-bold-Regular"), url("FreightSansProSemibold-Regular.woff2") format("woff2"), url("FreightSansProSemibold-Regular.woff") format("woff"), url("FreightSansProSemibold-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
 
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.alert {
+    position: fixed;
+    right: 0;
+    background-color: $alert_backgr;
+    border-radius: 10px;
+    display: flex;
+}
+
+.btn-close {
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    //padding-top: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #ff503f;
+    border: none;
+
+}
+
+.alert-notify {
+    visibility: hidden;
+}
+// .alert-mess,.alert-dtime{
+//     color: #1f2428;
+// }
+.main {
+    display: flex;
+    background-color: white;
+    height: 1200px;
+}
+
+.side-pannel {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f2428;
+    width: 129px;
+    text-align: center;
+}
+
+.side-block {
+    padding: 0px 35px;
+    font-family: "Freight Sans Pro Semi bold Regular", sans-serif;
+}
+
+.two {
+    position: absolute;
+    align-self: flex-end;
+}
+
+.side-user-img {
+    padding: 20px 20px 5px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+}
+
+.icon-fill {
+    fill: #595959;
+}
+
+.bi-three-dots {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings {
+    margin-bottom: 290px;
+}
+
+.text-icon {
+    color: #595959;
+    font-size: 18px;
+    line-height: 37px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.34);
+}
+
+.text-icon-white {
+    color: white;
+    font-size: 18px;
+    line-height: 37px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.34);
+}
+
+.bi-justify {
+    position: relative;
+}
+
+.bi-9-circle-fill {
+    position: absolute;
+    z-index: 5;
+    padding-left: 33px;
+}
+
+.bi-3-circle-fill {
+    position: absolute;
+    padding-left: 33px;
+}
+
+.header {
+    display: flex;
+    background-color: #f1f1f1;
+    height: 100px;
+}
+
+.button-reload {
+    display: flexbox;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    padding-top: 5px;
+    border-radius: 50%;
+    background-color: #ff503f;
+    border: none;
+    margin: 30px 0px 30px 30px;
+}
+
+.bi-arrow-counterclockwise {
+    transform: rotate(0deg);
+}
+
+.button-reload:hover {
+    cursor: pointer;
+    background-color: #a4281d;
+    transition: 10ms linear;
+}
+
+.bi-arrow-counterclockwise {
+    transform: rotate(-90deg);
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 1000px 30px 10px;
+    width: 114px;
+    height: 40px;
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    border-radius: 25px;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #4b4b4b;
+    font-family: "Freight Sans Pro Semi bold Regular", sans-serif;
+}
+
+.button-down {
+    display: flexbox;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    padding-top: 6px;
+    background-color: #aacc4e;
+    border-radius: 50%;
+    border: none;
+    margin: 30px 0px;
+}
+
+.button-down:hover {
+    cursor: pointer;
+    background-color: #607623;
+    transition: 10ms linear;
+}
+
+.users-online {
+    text-align: center;
+    margin: 30px 0px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    border-radius: 25px;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    font-family: "Freight Sans Pro Semi bold Regular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4b4b4b;
+    text-transform: uppercase;
+}
+
+.show-users {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 20px;
+    width: 150px;
+    background-color: #f1f1f1;
+}
+
+.user-hidden {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid rgba(164, 164, 164, 0.52);
+}
+
+.user-hidden-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-self: flex-start;
+    margin-right: 10px;
+}
+
+#hidden-name {
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+    font-size: 10px;
+}
+
+.users-online-icons {
+    padding-top: 10px;
+}
+
+.labels {
+    display: flex;
+    background-color: #f1f1f1;
+    height: 80px;
+    border: 1px solid #d3d7da;
+    box-shadow: -1px 2px 3px -1px rgba(0, 0, 0, 0.05);
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+    color: #4b4b4b;
+}
+
+.active-projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 79px;
+    background-color: white;
+    border: 1px solid #d3d7da;
+    text-align: center;
+}
+
+.bi-clock {
+    transform: translateX(-10px);
+}
+
+.l-notification {
+    transform: translateY(-15px);
+    margin-top: 10px;
+}
+
+.bi-send {
+    transform: translateX(-20px);
+    transform: rotateZ(270deg);
+    margin-right: 15px;
+}
+
+.messenger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 268px;
+    height: 79px;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d7da;
+    text-align: center;
+}
+
+.search {
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 130px;
+    text-align: end;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+    color: #c1c1c1;
+}
+
+.info-blocks {
+    display: flex;
+    flex-direction: row;
+}
+
+.percentage-block {
+    /*display: flex;
+  flex-direction: column;*/
+    width: 986px;
+    height: 964px;
+    overflow-y: scroll;
+    border: 1px solid rgba(212, 212, 212, 0.8);
+    box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 30px 15px;
+}
+
+.percentage-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.percentage-block::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 5px;
+    width: 6px;
+}
+
+.notify-block {
+    width: 367px;
+    height: 964px;
+    overflow-y: scroll;
+    border: 1px solid rgba(212, 212, 212, 0.8);
+    box-shadow: -1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 30px 0px;
+}
+
+.notify-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notify-block::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 5px;
+    width: 6px;
+}
+
+.search-project-name {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    height: 90px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.8);
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+    color: #c1c1c1;
+}
+
+.new-project-main {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    font-family: "Freight Sans Pro Semi bold Regular", sans-serif;
+}
+
+.new-projects-plus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 229px;
+    height: 40px;
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    border-radius: 25px;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #4b4b4b;
+}
+
+.new-button {
+    display: flexbox;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+    background-color: #ff503f;
+    border-radius: 50%;
+    border: none;
+    margin-left: 10px;
+}
+
+.new-button:hover {
+    cursor: pointer;
+    background-color: #a4281d;
+    transition: 10ms linear;
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    height: 90px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.8);
+}
+
+.project-row-hidden {
+    display: none;
+    align-items: center;
+    padding: 0px 30px;
+    height: 90px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.8);
+    background-color: #f8f8f8;
+}
+
+.project-row-new {
+    display: flex;
+    background-color: #ffc1bb;
+    border: 1px solid #bca7a7;
+}
+
+.caption-new {
+    color: #1f2428;
+}
+
+.caption-h {
+    text-decoration: line-through;
+    color: lightgrey;
+}
+
+.delete-button {
+    display: flexbox;
+    align-items: center;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+    background-color: #ff503f;
+    border-radius: 50%;
+    border: none;
+    margin-left: 10px;
+}
+
+.percent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    height: 33px;
+    background-color: #ff503f;
+    border-radius: 5px;
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+}
+
+.percent-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    height: 33px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid rgba(195, 195, 195, 0.52);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #ebebeb;
+}
+
+.date-h {
+    height: 33px;
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    border-radius: 20px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    font-family: "Freight Sans Pro Semibold", sans-serif;
+    padding: 0 20px;
+    color: #4b4b4b;
+    text-transform: uppercase;
+}
+
+.image-h {
+    width: 33px;
+    height: 33px;
+    margin-right: 5px;
+}
+
+.more-users {
+    display: flex;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    align-items: center;
+    justify-content: center;
+    color: rgba(164, 164, 164, 0.52);
+}
+
+.photos-h {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.image-user-h {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.bi-circle-fill-h {
+    position: relative;
+    z-index: 5;
+}
+
+.caption {
+    font-family: "Freight Sans Pro Medium", sans-serif;
+    padding-left: 15px;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+    color: #4b4b4b;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.buttons-h {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.reload-button-h {
+    margin-right: 5px;
+}
+
+.name-button {
+    width: 90px;
+    height: 33px;
+    background-color: rgba(19, 148, 248, 0);
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    border-radius: 25px;
+    font-family: "Freight Sans Pro Semibold", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+    color: #4b4b4b;
+}
+
+.name-button:hover {
+    cursor: pointer;
+    background-color: #e8e8e8;
+    transition: 10ms linear;
+}
+
+.search-button {
+    width: 34px;
+    height: 34px;
+    background-color: rgba(19, 148, 248, 0);
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: #ff503f;
+    transition: 10ms linear;
+}
+
+.more-button {
+    width: 34px;
+    height: 34px;
+    background-color: rgba(19, 148, 248, 0);
+    border: 1px solid rgba(164, 164, 164, 0.52);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.51);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.more-button:hover {
+    cursor: pointer;
+    background-color: #ff503f;
+    transition: 10ms linear;
+}
+
+.second-button {
+    width: 106px;
+}
+
+.third-button {
+    width: 137px;
+}
+
+.extend-project-row {
+    height: 118px;
+}
+
+.archiv {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    height: 55px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.8);
+}
+
+.archiv-button {
+    height: 40px;
+    width: 140px;
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+    font-size: 18px;
+    line-height: 37px;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+    color: #4b4b4b;
+    border: none;
+    background-color: #fff;
+}
+
+.archiv-button:hover {
+    cursor: pointer;
+    transition: 10ms linear;
+}
+
+.side-arrow {
+    transform: rotate(270deg);
+}
+
+.image-user-notify {
+    width: 41px;
+    height: 41px;
+}
+
+.user-image-friend {
+    position: relative;
+    z-index: 1;
+    transform: translateY(-15px);
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+}
+
+.bi-circle-fill {
+    position: relative;
+    align-self: flex-start;
+    z-index: 5;
+}
+
+.notify-row {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    height: 90px;
+    border-bottom: 1px solid rgba(212, 212, 212, 0.8);
+}
+
+.notification {
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
+}
+
+.name {
+    color: #4b4b4b;
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+}
+
+.message {
+    color: #9c9c9c;
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+}
+
+.date-time-notification {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #9c9c9c;
+    font-family: "Freight Sans Pro Semi bold Regular", sans-serif;
+}
+
+.activity-archiv-button {
+    font-size: 14px;
+    font-family: "Freight Sans Pro Medium Regular", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

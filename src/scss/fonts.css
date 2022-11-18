@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Ancient_Kyiv;
+  font-diasplay: swap;
+  src: url("../fonts/Ancient_Kyiv.woff2") format("woff2"), url("../fonts/Ancient_Kyiv.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Safron_Modern;
+  font-diasplay: swap;
+  src: url("../fonts/Safron_Modern.woff2") format("woff2"), url("../fonts/Safron_Modern.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Freight Sans Pro";
+  src: local("Freight Sans Pro Medium Regular"), local("Freight-Sans-Pro-Medium-Regular"), url("FreightSansProMedium-Regular.woff2") format("woff2"), url("FreightSansProMedium-Regular.woff") format("woff"), url("FreightSansProMedium-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Freight Sans Pro";
+  src: local("Freight Sans Pro Semi bold Regular"), local("Freight-Sans-Pro-Semi-bold-Regular"), url("FreightSansProSemibold-Regular.woff2") format("woff2"), url("FreightSansProSemibold-Regular.woff") format("woff"), url("FreightSansProSemibold-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}/*# sourceMappingURL=fonts.css.map */

@@ -29,6 +29,28 @@ body {
   background-color: #fff;
 }
 
+.alert {
+  position: fixed;
+  right: 0;
+  background-color: #f9a2a2;
+  border-radius: 10px;
+  display: flex;
+}
+
+.btn-close {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #ff503f;
+  border: none;
+}
+
+.alert-notify {
+  visibility: hidden;
+}
+
 .main {
   display: flex;
   background-color: white;
@@ -718,3 +740,5 @@ body {
   font-size: 14px;
   font-family: "Freight Sans Pro Medium Regular", sans-serif;
 }
+
+/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
